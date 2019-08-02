@@ -5,58 +5,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crystal Game</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery.min.js"></script>
+    <script
+        src="./assets/javascript/jQuery-Plugin-For-CSS3-Powered-Flip-Animations-justFlipIt/src/justFlipIt.js"></script>
+    <script
+        src="./assets/javascript/jQuery-Plugin-For-CSS3-Powered-Flip-Animations-justFlipIt/src/justflipit.min.js"></script>
+
+
+
+
+    <title>Crystal Collector Game</title>
 </head>
+
 
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div>
-                    <p>Crystal Collector Game</p>
-                    <p>Magic Number</p>
+                <section style="background: lightpink;" class="jumbotron">
+                    <h1>Crystal Collector</h1>
+                </section>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p><b>Here's how to play:</b></p>
+                        <ul>
+                            <li> You will be given a random number at the start of the game.</li>
+                            <li>️ There are four crystals below. By clicking on a crystal, you will add a specific
+                                amount of points to your total score.</li>
+                            <li>You will win the game by matching your total score to the random number, you lose at
+                                the game if your total score goes above the random number.</li>
+                            <li> The value of eah crystal is hidden from you until you click on it.</li>
+
+                            <li>Each time the game starts, the game will change the values of each crystal.</li>
+                            <li><b>Note: </b> You need to double click the crystal to flip it and get a value.</li>
+                        </ul>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3 id="targetNu"><b>Target Number:</b><br><br><span id=target
+                                        style="color:red">0</span></h3>
+                            </div>
+                            <div class="col-md-6">
+                                <h3 id="currentNu"><b>Current Number:</b><br><br><span id=current
+                                        style="color:blue">0</span></h3>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img id="crystalOne" src="./assets/images/crystalone.jpg" height="200px" width="200px"
+                                    ;></img>
+                                <h1 id="oneBack"></h1>
+                            </div>
+                            <div class="col-md-3">
+                                <img id="crystalTwo" src="./assets/images/crystalone.jpg" height="200px"
+                                    width="200px"></img>
+
+                                <h1 id="twoBack"></h1>
+                            </div>
+                            <div class="col-md-3">
+                                <img id="crystalThree" src="./assets/images/crystalone.jpg" height="200px"
+                                    width="200px"></img>
+                                <h1 id="threeBack"></h1>
+                            </div>
+                            <div class="col-md-3">
+                                <img id="crystalFour" src="./assets/images/crystalone.jpg" height="200px"
+                                    width="200px"></img>
+                                <h1 id="fourBack"></h1>
+                            </div>
+
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3 id="wins"><b>Wins:</b><br><br><span id=win>0</span></h3>
+                            </div>
+                            <div class="col-md-6">
+                                <h3 id="losses"><b>Losses:</b><br><br><span id=loss>0</span></h3>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button id="reset" onClick="resetGame();" style="color:green"></b>Reset</b></button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <hr>
+                                <h2 id="start" style="text-align:center;"><span class="blinking"></b>Have
+                                        </b></span></h2><br>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="col-md-12 crystal">
-                    <img class="crystalone" src="assets/images/crystalone.jpg">
-
-                    <img class="crystaltwo" src="assets/images/ crystaltwo.png">
-
-                    <img class="crystalthree" src="assets/images/ crystalthree.jpeg">
-
-                    <img class="crystalfour" src="assets/images/ crystalfour.jpg">
-                </div>
-                <p>How to Play</p>
-                <p>Current Score</p>
-                <p>Win</p>
-                <p>Lose</p>
             </div>
-        </div>
-    </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="assets/javascript/game.js"></script>
+            <script src="./assets/javascript/game.js"></script>
 
 </body>
 
